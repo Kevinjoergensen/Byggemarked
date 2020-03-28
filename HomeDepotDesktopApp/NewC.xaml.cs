@@ -1,5 +1,4 @@
-﻿
-using HomeDepotWebApp.Models;
+﻿using HomeDepotWebApp.Models;
 using HomeDepotWebApp.Storage;
 using System;
 using System.Collections.Generic;
@@ -19,40 +18,31 @@ using System.Windows.Shapes;
 namespace HomeDepotDesktopApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewC : Page
     {
         private HomeDepotContext _context;
 
-        public MainWindow()
+        public NewC()
         {
-            InitializeComponent();
-            Main.Content = new MainPage();
             _context = new HomeDepotContext();
             List<Tool> tools = _context.Tools.ToList<Tool>();
             List<Costumer> costumers = _context.Costumers.ToList<Costumer>();
-            this.DataContext = costumers;
+            InitializeComponent();
         }
 
-        private void mExit_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new NewC();
-        }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new MainPage();
-        }
-
-        public void GoBack()
-        {
-            Main.Content = new MainPage();
+            Costumer nc = new Costumer();
+            nc.Name = Navn.Text;
+            nc.Password = Password.Text;
+            nc.Username = Brugernavn.Text;
+            nc.Email = Email.Text;
+            nc.Id = _context.Costumers.Count() + 1;
+            _context.Costumers.Add(nc);
+            _context.SaveChanges();
+            this.NavigationService.Content = new MainPage();
         }
     }
 }

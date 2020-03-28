@@ -3,12 +3,12 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Inital : DbMigration
+    public partial class WebMigration : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Tools",
+                "dbo.Costumers",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -20,7 +20,7 @@
         
         public override void Down()
         {
-            DropTable("dbo.Tools");
+            DropTable("dbo.Costumers");
         }
     }
 }

@@ -10,16 +10,20 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(HomeDepotWebApp.Storage.HomeDepotContext context)
         {
-            context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Kulvator" });
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+            context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Kultivator" });
+            context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Båndsliber" });
+            context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Rystepudser" });
+            context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Kompressor" });
+            context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Slagboremaskine" });
+            context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Græsslåmaskine" });
+                         
+            context.Costumers.AddOrUpdate(c => c.Name, new Costumer { Name = "Kevin Jørgensen"});
+            
         }
     }
 }

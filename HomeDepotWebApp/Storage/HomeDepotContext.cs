@@ -11,5 +11,6 @@ namespace HomeDepotWebApp.Storage
         }
 
         public DbSet<Tool> Tools { get; set; }
+        public DbSet<Costumer> Costumers { get; set; }
     }
 }
