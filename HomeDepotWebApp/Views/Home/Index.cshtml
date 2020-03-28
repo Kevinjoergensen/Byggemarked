@@ -1,33 +1,18 @@
-﻿@model IEnumerable<HomeDepotWebApp.Models.Tool>
+﻿@model HomeDepotWebApp.Models.Customer
 
-@{
-    ViewBag.Title = "Home Page";
-}
+<div class="container">
+    <div class="jumbotron" style="text-align:center">
+        <h2>Login</h2>
+        <div style="text-align:center">
+            @using (Html.BeginForm()) {
+                @Html.LabelFor(model => model.Username)
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
 
-<!DOCTYPE html>
+                @Html.LabelFor(model => model.Password)
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div class="jumbotron">
-        <h1>Benn & Fix</h1>
-        <p class="lead">Udlejning af værktøjer til istandsættelse, havearbejde og boligforbedring</p>
-    </div>
-    <div class="jumbotron">
-        <h2>Produkter</h2>
-        <div class="d-flex flex-wrap">
-        @foreach (var item in Model)
-        {
-            <div class="p-2">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5IFsLM0ttrThFX7Cz9WyjAfYF-dgq3I4j2m5eFu_0uBZAeu6I" style="width:240px; height:auto"/>
-            <p>@item.Name</p>
-            </div>
-        }
-
+                <input type="submit" value="Login" class="btn btn-success btn-lg">
+            }
         </div>
     </div>
-</body>
-</html>
+</div>

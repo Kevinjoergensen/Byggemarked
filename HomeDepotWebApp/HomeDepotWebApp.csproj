@@ -137,16 +137,12 @@
     <Compile Include="Migrations\202003240808340_inital.designer.cs">
       <DependentUpon>202003240808340_inital.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003261717053_webMigration.cs" />
-    <Compile Include="Migrations\202003261717053_webMigration.designer.cs">
-      <DependentUpon>202003261717053_webMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003281837040_Rents.cs" />
-    <Compile Include="Migrations\202003281837040_Rents.designer.cs">
-      <DependentUpon>202003281837040_Rents.cs</DependentUpon>
+    <Compile Include="Migrations\202003281729210_Rent.cs" />
+    <Compile Include="Migrations\202003281729210_Rent.designer.cs">
+      <DependentUpon>202003281729210_Rent.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Costumer.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Rent.cs" />
     <Compile Include="Models\Tool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -271,6 +267,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Views\Home\IndexStyle.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -284,6 +281,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -294,17 +292,16 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Book.cshtml" />
+    <Content Include="Views\Home\BookConfirm.cshtml" />
+    <Content Include="Views\Home\Overview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003240808340_inital.resx">
       <DependentUpon>202003240808340_inital.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003261717053_webMigration.resx">
-      <DependentUpon>202003261717053_webMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003281837040_Rents.resx">
-      <DependentUpon>202003281837040_Rents.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003281729210_Rent.resx">
+      <DependentUpon>202003281729210_Rent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -318,7 +315,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

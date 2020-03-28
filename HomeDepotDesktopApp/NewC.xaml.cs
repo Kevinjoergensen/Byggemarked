@@ -28,19 +28,19 @@ namespace HomeDepotDesktopApp
         {
             _context = new HomeDepotContext();
             List<Tool> tools = _context.Tools.ToList<Tool>();
-            List<Costumer> costumers = _context.Costumers.ToList<Costumer>();
+            List<Customer> costumers = _context.Customers.ToList<Customer>();
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Costumer nc = new Costumer();
+            Customer nc = new Customer();
             nc.Name = Navn.Text;
             nc.Password = Password.Text;
             nc.Username = Brugernavn.Text;
             nc.Email = Email.Text;
-            nc.Id = _context.Costumers.Count() + 1;
-            _context.Costumers.Add(nc);
+            nc.CustomerId = _context.Customers.Count() + 1;
+            _context.Customers.Add(nc);
             _context.SaveChanges();
             this.NavigationService.Content = new MainPage();
         }

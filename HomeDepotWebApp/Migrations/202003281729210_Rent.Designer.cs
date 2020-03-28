@@ -7,18 +7,18 @@ namespace HomeDepotWebApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class Rents : IMigrationMetadata
+    public sealed partial class Rent : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Rents));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Rent));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003281837040_Rents"; }
+            get { return "202003281729210_Rent"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return null; }
+            get { return Resources.GetString("Source"); }
         }
         
         string IMigrationMetadata.Target

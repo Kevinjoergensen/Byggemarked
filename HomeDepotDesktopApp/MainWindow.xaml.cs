@@ -31,7 +31,7 @@ namespace HomeDepotDesktopApp
             Main.Content = new MainPage();
             _context = new HomeDepotContext();
             List<Tool> tools = _context.Tools.ToList<Tool>();
-            List<Costumer> costumers = _context.Costumers.ToList<Costumer>();
+            List<Customer> costumers = _context.Customers.ToList<Customer>();
             this.DataContext = costumers;
         }
 

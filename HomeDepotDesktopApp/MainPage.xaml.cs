@@ -23,19 +23,19 @@ namespace HomeDepotDesktopApp
     public partial class MainPage : Page
     {
         private HomeDepotContext _context;
-        private List<Costumer> allCostumers;
+        private List<Customer> allCostumers;
         public MainPage()
         {
             InitializeComponent();
             _context = new HomeDepotContext();
             List<Tool> tools = _context.Tools.ToList<Tool>();
-            allCostumers = _context.Costumers.ToList<Costumer>();
+            allCostumers = _context.Customers.ToList<Customer>();
             filterCostumers();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Costumer c = (Costumer)ListBoxKunder.SelectedItem;
+            Customer c = (Customer)ListBoxKunder.SelectedItem;
             
             this.NavigationService.Content = new CostumerPage(c);
         }
@@ -53,15 +53,15 @@ namespace HomeDepotDesktopApp
             }
             else
             {
-                List<Costumer> cust = new List<Costumer>();
-                foreach (Costumer c in allCostumers)
+                List<Customer> cust = new List<Customer>();
+                foreach (Customer c in allCostumers)
                 {
 
                     if (c.Name.ToLower().Contains(searchfield.Text.ToLower()))
                     {
                         cust.Add(c);
                     }
-                    else if (c.Id.ToString().Contains(searchfield.Text.ToLower()))
+                    else if (c.CustomerId.ToString().Contains(searchfield.Text.ToLower()))
                     {
                         cust.Add(c);
                     }

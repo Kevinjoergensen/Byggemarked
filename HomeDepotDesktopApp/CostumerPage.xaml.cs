@@ -24,21 +24,21 @@ namespace HomeDepotDesktopApp
     public partial class CostumerPage : Page
     {
        private HomeDepotContext _context;
-        public CostumerPage(Costumer costumer)
+        public CostumerPage(Customer costumer)
         {
             _context = new HomeDepotContext();
 
             InitializeComponent();
             navn.Text = costumer.Name;
             email.Text = costumer.Email;
-            brugerid.Text = costumer.Id.ToString();
+            brugerid.Text = costumer.CustomerId.ToString();
             brugernavn.Text = costumer.Username;
             password.Text = costumer.Password;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _context.Costumers.AddOrUpdate(t => t.Id, new Costumer { Id = Int32.Parse(brugerid.Text), Name = navn.Text, Email = email.Text, Password = password.Text, Username = brugernavn.Text }) ;
+            _context.Customers.AddOrUpdate(t => t.CustomerId, new Customer { CustomerId = Int32.Parse(brugerid.Text), Name = navn.Text, Email = email.Text, Password = password.Text, Username = brugernavn.Text }) ;
             _context.SaveChanges();
             this.NavigationService.Content = new MainPage();
         }
