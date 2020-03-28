@@ -22,7 +22,7 @@
             context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Slagboremaskine" });
             context.Tools.AddOrUpdate(t => t.Name, new Tool { Name = "Græsslåmaskine" });
                          
-            context.Costumers.AddOrUpdate(c => c.Name, new Costumer { Name = "Kevin Jørgensen"});
+            context.Costumers.AddOrUpdate(c => c.Name, new Costumer { Name = "Kevin Jørgensen", Email = "eaakej@students.eaaa.dk", Password ="1234", Username ="KevinJ"});
             
         }
     }

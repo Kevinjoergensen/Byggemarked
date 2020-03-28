@@ -14,20 +14,29 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="0" FontSize="30">Navn</Label>
-        <TextBox x:Name="Navn" Grid.Row="0" Grid.Column="1"></TextBox>
-        <Label Grid.Row="1" Grid.Column="0" FontSize="30">E-mail</Label>
-        <TextBox x:Name="Email" Grid.Row="1" Grid.Column="1"></TextBox>
-        <Label Grid.Row="2" Grid.Column="0" FontSize="30">Brugernavn</Label>
-        <TextBox x:Name="Brugernavn" Grid.Row="2" Grid.Column="1"></TextBox>
-        <Label Grid.Row="3" Grid.Column="0" FontSize="30">Password</Label>
-        <TextBox x:Name="Password" Grid.Row="3" Grid.Column="1"></TextBox>
-        <Button Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Opret" Click="Button_Click"></Button>
+        <Menu Grid.ColumnSpan="3">
+            <MenuItem Header="Fil">
+                <MenuItem Header="Ny Kunde" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="Afslut" Click="mExit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="tilbage" Header="Tilbage" Click="MenuItem_Click_1">
+            </MenuItem>
+        </Menu>
+        <Label Grid.Row="1" Grid.Column="0" FontSize="30">Navn</Label>
+        <TextBox x:Name="Navn" Grid.Row="1" Grid.Column="1"></TextBox>
+        <Label Grid.Row="2" Grid.Column="0" FontSize="30">E-mail</Label>
+        <TextBox x:Name="Email" Grid.Row="2" Grid.Column="1"></TextBox>
+        <Label Grid.Row="3" Grid.Column="0" FontSize="30">Brugernavn</Label>
+        <TextBox x:Name="Brugernavn" Grid.Row="3" Grid.Column="1"></TextBox>
+        <Label Grid.Row="4" Grid.Column="0" FontSize="30">Password</Label>
+        <TextBox x:Name="Password" Grid.Row="4" Grid.Column="1"></TextBox>
+        <Button Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Content="Opret" Click="Button_Click"></Button>
     </Grid>
 </Page>

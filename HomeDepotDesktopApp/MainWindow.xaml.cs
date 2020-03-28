@@ -35,24 +35,6 @@ namespace HomeDepotDesktopApp
             this.DataContext = costumers;
         }
 
-        private void mExit_Click(object sender, RoutedEventArgs e)
-        {
-            System.Windows.Application.Current.Shutdown();
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new NewC();
-        }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new MainPage();
-        }
-
-        public void GoBack()
-        {
-            Main.Content = new MainPage();
-        }
+        
     }
 }

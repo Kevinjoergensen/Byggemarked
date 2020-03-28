@@ -78,6 +78,15 @@ namespace HomeDepotDesktopApp
                 this.DataContext = cust;
             }
         }
+        private void mExit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Content = new NewC();
+        }
 
     }
 }

@@ -42,5 +42,25 @@ namespace HomeDepotDesktopApp
             _context.SaveChanges();
             this.NavigationService.Content = new MainPage();
         }
+
+        private void mExit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Content = new NewC();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Content = new MainPage();
+        }
+
+        public void GoBack()
+        {
+            this.NavigationService.Content = new MainPage();
+        }
     }
 }

@@ -10,6 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -23,22 +24,29 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+        <Menu Grid.ColumnSpan="3">
+            <MenuItem Header="Fil">
+                <MenuItem Header="Ny Kunde" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="Afslut" Click="mExit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="tilbage" Header="Tilbage" Click="MenuItem_Click_1">
+            </MenuItem>
+        </Menu>
             
-        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Navn</Label>
-        <TextBox Grid.Row="0" Grid.Column="1" x:Name="navn"></TextBox>
-        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Email</Label>
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="email"></TextBox>
-        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Brugernavn</Label>
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="brugernavn"></TextBox>
-        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Kodeord</Label>
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="password"></TextBox>
-        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">ID</Label>
-        <TextBox IsReadOnly = "True" Grid.Row="4" Grid.Column="1" x:Name="brugerid"></TextBox>
-        <Label Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center">Bookinger</Label>
-        <ListBox Grid.Row="6" Grid.ColumnSpan="2">
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Navn</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="navn"></TextBox>
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Email</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="email"></TextBox>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Brugernavn</Label>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="brugernavn"></TextBox>
+        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Kodeord</Label>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="password"></TextBox>
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">ID</Label>
+        <TextBox IsReadOnly = "True" Grid.Row="5" Grid.Column="1" x:Name="brugerid"></TextBox>
+        <Label Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center">Bookinger</Label>
+        <ListBox Grid.Row="7" Grid.ColumnSpan="2">
             <!--Her skal items være samt radiobuttons-->
         </ListBox>
-        <Button Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Grid.ColumnSpan="2" Click="Button_Click">Opdater</Button>
+        <Button Grid.Row="8" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Grid.ColumnSpan="2" Click="Button_Click">Opdater</Button>
     </Grid>
 </Page>

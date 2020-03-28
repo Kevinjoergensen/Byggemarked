@@ -16,13 +16,19 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-       
-        <Label Grid.Row="0">Kunder</Label>
-        <Label Grid.Row="0" Grid.Column="1">Søg: </Label>
-        <TextBox x:Name="searchfield" Grid.Row="0" Grid.Column="2" TextChanged="TextBox_TextChanged" />
-        <ListBox x:Name="ListBoxKunder" Grid.Row="1" Grid.ColumnSpan="3" ItemsSource="{Binding}" SelectionChanged="ListBox_SelectionChanged">
+        <Menu Grid.ColumnSpan="3">
+            <MenuItem Header="Fil">
+                <MenuItem Header="Ny Kunde" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="Afslut" Click="mExit_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Label Grid.Row="1">Kunder</Label>
+        <Label Grid.Row="1" Grid.Column="1">Søg: </Label>
+        <TextBox x:Name="searchfield" Grid.Row="1" Grid.Column="2" TextChanged="TextBox_TextChanged" />
+        <ListBox x:Name="ListBoxKunder" Grid.Row="2" Grid.ColumnSpan="3" ItemsSource="{Binding}" SelectionChanged="ListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock>
