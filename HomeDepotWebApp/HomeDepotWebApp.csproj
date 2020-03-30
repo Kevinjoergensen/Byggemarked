@@ -141,6 +141,14 @@
     <Compile Include="Migrations\202003281729210_Rent.designer.cs">
       <DependentUpon>202003281729210_Rent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003300716334_Kunde.cs" />
+    <Compile Include="Migrations\202003300716334_Kunde.designer.cs">
+      <DependentUpon>202003300716334_Kunde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003301402445_testingagain.cs" />
+    <Compile Include="Migrations\202003301402445_testingagain.designer.cs">
+      <DependentUpon>202003301402445_testingagain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Rent.cs" />
@@ -302,6 +310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003281729210_Rent.resx">
       <DependentUpon>202003281729210_Rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003300716334_Kunde.resx">
+      <DependentUpon>202003300716334_Kunde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003301402445_testingagain.resx">
+      <DependentUpon>202003301402445_testingagain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

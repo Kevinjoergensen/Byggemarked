@@ -12,5 +12,10 @@ namespace HomeDepotWebApp.Models
         public String Description { get; set; }
         public double Depos { get; set; }
         public double DayPrice { get; set; }
+
+        public static implicit operator Tool(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
