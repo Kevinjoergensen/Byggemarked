@@ -29,7 +29,7 @@ namespace HomeDepotDesktopApp
             InitializeComponent();
             _context = new HomeDepotContext();
             allCostumers = _context.Customers.ToList<Customer>();
-            filterCostumers();
+            FilterCostumers();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,10 +41,10 @@ namespace HomeDepotDesktopApp
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            filterCostumers();
+            FilterCostumers();
         }
 
-        private void filterCostumers()
+        private void FilterCostumers()
         {
             if (searchfield.Text.Length < 1)
             {

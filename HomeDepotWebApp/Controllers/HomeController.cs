@@ -25,8 +25,9 @@ namespace HomeDepotWebApp.Controllers
             if(customer != null) {
                 rent = new Rent
                 {
-                    Customer = customer
-                };
+                    Customer = db.Customers.Find(customer.CustomerId)
+            };
+                db.SaveChanges();
                 return RedirectToAction("Overview");
             } else {
                 return RedirectToAction("Index");
@@ -46,16 +47,19 @@ namespace HomeDepotWebApp.Controllers
             Tool tool = db.Tools.Find(id);
 
             rent.RentTool = tool;
-
+            db.SaveChanges();
             return View("Book", rent);
         }
 
         [HttpPost]
-        public ActionResult BookConfirm(Rent rente)
+        public ActionResult BookConfirm(int days, string tid)
         {
-            db.Rents.Add(rente);
+            
+            rent.Days = days; 
+            rent.PickUp = tid;
+            db.Rents.Add(rent);
             db.SaveChanges();
-            return View(rente);
+            return View(rent);
         }
 
         public ActionResult About()
@@ -65,7 +69,7 @@ namespace HomeDepotWebApp.Controllers
             return View();
         }
 
-        public ActionResult Contact(Rent rent)
+        public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
