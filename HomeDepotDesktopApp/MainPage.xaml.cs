@@ -60,7 +60,7 @@ namespace HomeDepotDesktopApp
                     {
                         cust.Add(c);
                     }
-                    else if (c.Id.ToString().Contains(searchfield.Text.ToLower()))
+                    else if (c.CustomerId.ToString().Contains(searchfield.Text.ToLower()))
                     {
                         cust.Add(c);
                     }

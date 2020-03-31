@@ -2,9 +2,7 @@
 using HomeDepotWebApp.Storage;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace HomeDepotWebApp.Controllers
@@ -12,7 +10,7 @@ namespace HomeDepotWebApp.Controllers
     public class HomeController : Controller
     {
         private HomeDepotContext db = new HomeDepotContext();
-        public static Rent rent;
+        private static Rent rent;
 
         public ActionResult Index()
         {
@@ -23,10 +21,12 @@ namespace HomeDepotWebApp.Controllers
         public ActionResult Index(Customer req)
         {
             var customer = db.Customers.Where(c => c.Username.Equals(req.Username) && c.Password.Equals(req.Password)).FirstOrDefault();
-            rent = new Rent();
 
             if(customer != null) {
-                rent.Customer = customer;
+                rent = new Rent
+                {
+                    Customer = customer
+                };
                 return RedirectToAction("Overview");
             } else {
                 return RedirectToAction("Index");
@@ -36,7 +36,6 @@ namespace HomeDepotWebApp.Controllers
         
         public ActionResult Overview()
         {
-            Console.WriteLine(rent.Customer.Name);
             List<Tool> tools = db.Tools.ToList<Tool>();
             
             return View(tools);
@@ -44,22 +43,19 @@ namespace HomeDepotWebApp.Controllers
 
         public ActionResult Book(int id)
         {
-            int ideet = id;
+            Tool tool = db.Tools.Find(id);
 
-            Tool tool = db.Tools.Find(ideet);
-            rent.Tool = tool;
+            rent.RentTool = tool;
 
-            return View(rent);
+            return View("Book", rent);
         }
 
         [HttpPost]
-        public ActionResult BookConfirm(Rent rent)
+        public ActionResult BookConfirm(Rent rente)
         {
-
-            Customer c = rent.Customer;
-            db.Rents.Add(rent);
+            db.Rents.Add(rente);
             db.SaveChanges();
-            return View(rent);
+            return View(rente);
         }
 
         public ActionResult About()
