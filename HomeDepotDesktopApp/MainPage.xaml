@@ -35,7 +35,7 @@
                         <TextBlock.Text>
                             <MultiBinding StringFormat="{}{0} - Kundeid: {1} - Email: {2}">
                                 <Binding Path="Name"/>
-                                <Binding Path="Id"/>
+                                <Binding Path="CustomerId"/>
                                 <Binding Path="Email"/>
                             </MultiBinding>
                         </TextBlock.Text>

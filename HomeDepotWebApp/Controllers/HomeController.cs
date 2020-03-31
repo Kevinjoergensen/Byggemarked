@@ -2,6 +2,7 @@
 using HomeDepotWebApp.Storage;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -19,12 +20,13 @@ namespace HomeDepotWebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Customer req) {
+        public ActionResult Index(Customer req)
+        {
             var customer = db.Customers.Where(c => c.Username.Equals(req.Username) && c.Password.Equals(req.Password)).FirstOrDefault();
             rent = new Rent();
+
             if(customer != null) {
                 rent.Customer = customer;
-                rent.CustomerID = customer.CustomerId;
                 return RedirectToAction("Overview");
             } else {
                 return RedirectToAction("Index");
@@ -45,8 +47,7 @@ namespace HomeDepotWebApp.Controllers
             int ideet = id;
 
             Tool tool = db.Tools.Where(t => t.Id.Equals(ideet)).FirstOrDefault();
-            rent.tool = tool;
-            rent.ToolId = tool.Id;
+            rent.Tool = tool;
 
             return View(rent);
         }
@@ -54,8 +55,10 @@ namespace HomeDepotWebApp.Controllers
         [HttpPost]
         public ActionResult BookConfirm(Rent rent)
         {
+
             Customer c = rent.Customer;
-            
+            db.Rents.AddOrUpdate(t => t.Id, new Rent{ Id = db.Rents.Count(), Customer = c, Days = rent.Days, PickUp=rent.PickUp, Status = false, Tool = rent.Tool });
+
             db.Rents.Add(rent);
             db.SaveChanges();
             return View(rent);

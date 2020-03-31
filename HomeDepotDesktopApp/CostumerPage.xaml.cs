@@ -27,18 +27,20 @@ namespace HomeDepotDesktopApp
         public CostumerPage(Customer costumer)
         {
             _context = new HomeDepotContext();
-
             InitializeComponent();
+
             navn.Text = costumer.Name;
             email.Text = costumer.Email;
-            brugerid.Text = costumer.CustomerId.ToString();
+            brugerid.Text = costumer.Id.ToString();
             brugernavn.Text = costumer.Username;
             password.Text = costumer.Password;
+            List<Rent> bookinger = _context.Rents.Where(r => r.Customer.Id.Equals(costumer.Id)).ToList();
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _context.Customers.AddOrUpdate(t => t.CustomerId, new Customer { CustomerId = Int32.Parse(brugerid.Text), Name = navn.Text, Email = email.Text, Password = password.Text, Username = brugernavn.Text }) ;
+            _context.Customers.AddOrUpdate(t => t.Id, new Customer { Id = Int32.Parse(brugerid.Text), Name = navn.Text, Email = email.Text, Password = password.Text, Username = brugernavn.Text }) ;
             _context.SaveChanges();
             this.NavigationService.Content = new MainPage();
         }

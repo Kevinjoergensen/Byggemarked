@@ -23,12 +23,11 @@ namespace HomeDepotDesktopApp
     public partial class MainPage : Page
     {
         private HomeDepotContext _context;
-        private List<Customer> allCostumers;
+        public List<Customer> allCostumers;
         public MainPage()
         {
             InitializeComponent();
             _context = new HomeDepotContext();
-            List<Tool> tools = _context.Tools.ToList<Tool>();
             allCostumers = _context.Customers.ToList<Customer>();
             filterCostumers();
         }
@@ -61,7 +60,7 @@ namespace HomeDepotDesktopApp
                     {
                         cust.Add(c);
                     }
-                    else if (c.CustomerId.ToString().Contains(searchfield.Text.ToLower()))
+                    else if (c.Id.ToString().Contains(searchfield.Text.ToLower()))
                     {
                         cust.Add(c);
                     }

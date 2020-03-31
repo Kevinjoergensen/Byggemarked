@@ -133,21 +133,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003240808340_inital.cs" />
-    <Compile Include="Migrations\202003240808340_inital.designer.cs">
-      <DependentUpon>202003240808340_inital.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003281729210_Rent.cs" />
-    <Compile Include="Migrations\202003281729210_Rent.designer.cs">
-      <DependentUpon>202003281729210_Rent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003300716334_Kunde.cs" />
-    <Compile Include="Migrations\202003300716334_Kunde.designer.cs">
-      <DependentUpon>202003300716334_Kunde.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003301402445_testingagain.cs" />
-    <Compile Include="Migrations\202003301402445_testingagain.designer.cs">
-      <DependentUpon>202003301402445_testingagain.cs</DependentUpon>
+    <Compile Include="Migrations\202003310959495_Link.cs" />
+    <Compile Include="Migrations\202003310959495_Link.designer.cs">
+      <DependentUpon>202003310959495_Link.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -305,20 +293,6 @@
     <Content Include="Views\Home\Overview.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003240808340_inital.resx">
-      <DependentUpon>202003240808340_inital.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003281729210_Rent.resx">
-      <DependentUpon>202003281729210_Rent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003300716334_Kunde.resx">
-      <DependentUpon>202003300716334_Kunde.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003301402445_testingagain.resx">
-      <DependentUpon>202003301402445_testingagain.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
@@ -328,6 +302,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202003310959495_Link.resx">
+      <DependentUpon>202003310959495_Link.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
