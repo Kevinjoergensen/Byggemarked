@@ -46,7 +46,7 @@ namespace HomeDepotWebApp.Controllers
         {
             int ideet = id;
 
-            Tool tool = db.Tools.Where(t => t.Id.Equals(ideet)).FirstOrDefault();
+            Tool tool = db.Tools.Find(ideet);
             rent.Tool = tool;
 
             return View(rent);
@@ -57,8 +57,6 @@ namespace HomeDepotWebApp.Controllers
         {
 
             Customer c = rent.Customer;
-            db.Rents.AddOrUpdate(t => t.Id, new Rent{ Id = db.Rents.Count(), Customer = c, Days = rent.Days, PickUp=rent.PickUp, Status = false, Tool = rent.Tool });
-
             db.Rents.Add(rent);
             db.SaveChanges();
             return View(rent);

@@ -12,5 +12,6 @@ namespace HomeDepotWebApp.Models {
         public String Password { get; set; }
         public String Name { get; set; }
         public String Email { get; set; }
+        public List<Rent> rents { get; set; }
     }
 }
