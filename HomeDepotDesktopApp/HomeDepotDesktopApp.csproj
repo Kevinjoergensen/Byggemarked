@@ -65,8 +65,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="RentOverview.xaml.cs">
-      <DependentUpon>RentOverview.xaml</DependentUpon>
+    <Compile Include="RentPage.xaml.cs">
+      <DependentUpon>RentPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
@@ -87,7 +87,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NewC.xaml">
+    <Page Include="NewCustomerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,14 +95,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RentOverview.xaml">
+    <Page Include="RentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NewC.xaml.cs">
-      <DependentUpon>NewC.xaml</DependentUpon>
+    <Compile Include="NewCustomerPage.xaml.cs">
+      <DependentUpon>NewCustomerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="CostumerPage.xaml.cs">
       <DependentUpon>CostumerPage.xaml</DependentUpon>

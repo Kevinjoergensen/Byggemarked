@@ -37,7 +37,7 @@
         <TextBox IsReadOnly = "True" Grid.Row="1" Grid.Column="1" x:Name="id"></TextBox>
         <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Værktøj</Label>
         <TextBox IsReadOnly = "True" Grid.Row="2" Grid.Column="1" x:Name="tool"></TextBox>
-        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Afhentnings tidspunkt</Label>
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Afhentning</Label>
         <TextBox IsReadOnly = "True" Grid.Row="3" Grid.Column="1" x:Name="pickup"></TextBox>
         <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">Antal dage</Label>
         <TextBox IsReadOnly = "True" Grid.Row="4" Grid.Column="1" x:Name="days"></TextBox>

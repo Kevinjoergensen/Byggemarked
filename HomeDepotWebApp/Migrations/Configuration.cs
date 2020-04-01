@@ -21,6 +21,9 @@
             context.Tools.AddOrUpdate(t => t.Name, new Tool { Id = 4, Name = "Græsslåmaskine", Description = "Slår græsset hurtigere end en veganer kan spise det", Depos = 125, DayPrice = 150 });
 
             context.Customers.AddOrUpdate(c => c.Name, new Customer { CustomerId = 1, Name = "John Doe", Email = "JD@live.dk", Username = "JohnD", Password = "123" });
+            context.Customers.AddOrUpdate(c => c.Name, new Customer { CustomerId = 2, Name = "Kevin Jørgensen", Email = "eaakej@students.eaaa.dk", Username = "KevinJ", Password = "123" });
+            context.Customers.AddOrUpdate(c => c.Name, new Customer { CustomerId = 3, Name = "Matias Rask Lauridsen", Email = "eaamrla@students.eaaa.dk", Username = "MatiasRL", Password = "123" });
+            context.Customers.AddOrUpdate(c => c.Name, new Customer { CustomerId = 4, Name = "Markus Winterberg", Email = "eaamknw@students.eaaa.dk", Username = "MarkusW", Password = "1234" });
 
             //  This method will be called after migrating to the latest version.
 
