@@ -65,5 +65,12 @@ namespace HomeDepotDesktopApp
         {
             this.NavigationService.Content = new MainPage();
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Rent rent = (Rent)bookinger.SelectedItem;
+            this.NavigationService.Content = new RentOverview(rent);
+        }
+
     }
 }
