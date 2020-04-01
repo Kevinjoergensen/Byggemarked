@@ -35,6 +35,7 @@ namespace HomeDepotDesktopApp
             brugernavn.Text = costumer.Username;
             password.Text = costumer.Password;
             List<Rent> bookinger = _context.Rents.Where(r => r.Customer.CustomerId.Equals(costumer.CustomerId)).ToList();
+            this.DataContext = bookinger;
         }
 
 
