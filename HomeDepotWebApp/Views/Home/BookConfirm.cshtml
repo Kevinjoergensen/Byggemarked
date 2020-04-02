@@ -4,5 +4,51 @@
     ViewBag.Title = "BookConfirm";
 }
 
-<h2>Booking er gået igennem</h2>
+<h2 class="text-center">Booking er gået igennem</h2>
+<h5 class="text-center">Du kan inden længe hente hente udstyret i butikken</h5>
+<table class="table-striped table-bordered mx-auto" style="width: 50%">
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Værdi</th>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.RentTool.Name)</td>
+            <td>@Html.DisplayFor(model => model.RentTool.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.RentTool.Description)</td>
+            <td>@Html.DisplayFor(model => model.RentTool.Description)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.RentTool.Depos)</td>
+            <td>@Html.DisplayFor(model => model.RentTool.Depos)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.RentTool.DayPrice)</td>
+            <td>@Html.DisplayFor(model => model.RentTool.DayPrice)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Days)</td>
+            <td>@Html.DisplayFor(model => model.Days)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.PickUp)</td>
+            <td>@Html.DisplayFor(model => model.PickUp)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Customer.CustomerId)</td>
+            <td>@Html.DisplayFor(model => model.Customer.CustomerId)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Customer.Email)</td>
+            <td>@Html.DisplayFor(model => model.Customer.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Customer.Name)</td>
+            <td>@Html.DisplayFor(model => model.Customer.Name)</td>
+        </tr>
+    </thead>
+</table>
+<br />
 

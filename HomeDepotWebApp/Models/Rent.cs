@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 
-namespace HomeDepotWebApp.Models {
-    public class Rent {
+namespace HomeDepotWebApp.Models
+{
+    public class Rent
+    {
 
         public int Id { get; set; }
         public virtual Tool RentTool { get; set; }

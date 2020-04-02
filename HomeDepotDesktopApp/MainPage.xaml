@@ -22,7 +22,7 @@
         <Menu Grid.ColumnSpan="3">
             <MenuItem Header="Fil">
                 <MenuItem Header="Ny Kunde" Click="MenuItem_Click"></MenuItem>
-                <MenuItem Header="Afslut" Click="mExit_Click"></MenuItem>
+                <MenuItem Header="Afslut" Click="MenuExit_Click"></MenuItem>
             </MenuItem>
         </Menu>
         <Label Grid.Row="1">Kunder</Label>

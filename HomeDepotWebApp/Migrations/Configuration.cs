@@ -1,10 +1,7 @@
 ﻿namespace HomeDepotWebApp.Migrations
 {
     using HomeDepotWebApp.Models;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<HomeDepotWebApp.Storage.HomeDepotContext>
     {
@@ -15,7 +12,7 @@
 
         protected override void Seed(HomeDepotWebApp.Storage.HomeDepotContext context)
         {
-            context.Tools.AddOrUpdate(t => t.Name, new Tool { Id = 1, Name = "Kultivator", Description="River jorden op", Depos=100, DayPrice = 50 });
+            context.Tools.AddOrUpdate(t => t.Name, new Tool { Id = 1, Name = "Kultivator", Description = "River jorden op", Depos = 100, DayPrice = 50 });
             context.Tools.AddOrUpdate(t => t.Name, new Tool { Id = 2, Name = "Motersav", Description = "Nem og kraftfuld maskine", Depos = 75, DayPrice = 25 });
             context.Tools.AddOrUpdate(t => t.Name, new Tool { Id = 3, Name = "Slagboremaskine", Description = "Kan bore igennem hvad som helst", Depos = 50, DayPrice = 40 });
             context.Tools.AddOrUpdate(t => t.Name, new Tool { Id = 4, Name = "Græsslåmaskine", Description = "Slår græsset hurtigere end en veganer kan spise det", Depos = 125, DayPrice = 150 });

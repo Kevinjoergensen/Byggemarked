@@ -24,7 +24,7 @@
         <Menu Grid.ColumnSpan="3">
             <MenuItem Header="Fil">
                 <MenuItem Header="Ny Kunde" Click="MenuItem_Click"></MenuItem>
-                <MenuItem Header="Afslut" Click="mExit_Click"></MenuItem>
+                <MenuItem Header="Afslut" Click="MenuExit_Click"></MenuItem>
             </MenuItem>
             <MenuItem x:Name="tilbage" Header="Tilbage" Click="MenuItem_Click_1">
             </MenuItem>

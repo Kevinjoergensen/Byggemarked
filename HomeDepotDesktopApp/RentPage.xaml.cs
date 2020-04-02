@@ -1,15 +1,11 @@
 ﻿using HomeDepotWebApp.Models;
+using HomeDepotWebApp.Storage;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using HomeDepotWebApp.Storage;
-using System.Collections.Generic;
-using System;
 
 namespace HomeDepotDesktopApp
 {
-    /// <summary>
-    /// Interaction logic for RentOverview.xaml
-    /// </summary>
     public partial class RentOverview : Page
     {
         private HomeDepotContext _context;
@@ -27,7 +23,7 @@ namespace HomeDepotDesktopApp
             combo.SelectedItem = rent.Status;
 
         }
-        private void mExit_Click(object sender, RoutedEventArgs e)
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
@@ -47,10 +43,12 @@ namespace HomeDepotDesktopApp
             if (combo.Text.Equals("Reserveret"))
             {
                 _context.Rents.Find(currentRent.Id).Status = Status.Reserveret;
-            } else if (combo.Text.Equals("Udleveret"))
+            }
+            else if (combo.Text.Equals("Udleveret"))
             {
                 _context.Rents.Find(currentRent.Id).Status = Status.Udleveret;
-            } else if (combo.Text.Equals("Tilbageleveret"))
+            }
+            else if (combo.Text.Equals("Tilbageleveret"))
             {
                 _context.Rents.Find(currentRent.Id).Status = Status.Tilbageleveret;
             }
