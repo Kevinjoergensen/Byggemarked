@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeDepotWebApp", "HomeDepotWebApp\HomeDepotWebApp.csproj", "{268DE805-1C8A-426F-B69D-4556636F56AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeDepotDesktopApp", "HomeDepotDesktopApp\HomeDepotDesktopApp.csproj", "{6C0B1A79-2C51-4E23-B714-377529DB3AA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeDepotDesktopApp", "..\Benjasbyg\HomeDepotDesktopApp\HomeDepotDesktopApp.csproj", "{6C0B1A79-2C51-4E23-B714-377529DB3AA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
