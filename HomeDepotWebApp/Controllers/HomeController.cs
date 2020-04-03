@@ -49,7 +49,7 @@ namespace HomeDepotWebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult BookConfirm(int days, string PickUp)
+        public ActionResult Confirm(int days, string PickUp)
         {
             rent.Days = days;
             rent.PickUp = PickUp;
